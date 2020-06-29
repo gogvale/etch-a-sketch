@@ -1,18 +1,16 @@
 :root {
   --width: 40em;
   --num-blocks: 16;
-  --border-size: 1px;
-  --block-width: calc(
-    var(--width) / var(--num-blocks) - var(--border-size) * 2
-  );
+  --block-width: calc(var(--width) / var(--num-blocks));
 }
 .block {
-  background-color: hsla(337, 100%, 56%, 0.863);
   width: var(--block-width);
   height: var(--block-width);
   border: var(--border-size) solid black;
+  box-shadow: 1px 1px black;
 }
 main {
+  border: 1px solid black;
   width: var(--width);
   display: inline-flex;
   flex-wrap: wrap;
