@@ -1,7 +1,7 @@
 :root {
   --width: 40em;
   --num-blocks: 16;
-  --block-width: calc(var(--width) / var(--num-blocks));
+  --block-width: calc(var(--width) / var(--num-blocks) - 0.01px);
 }
 .block {
   width: var(--block-width);
