@@ -3,6 +3,15 @@
   --num-blocks: 16;
   --block-width: calc(var(--width) / var(--num-blocks) - 0.01px);
 }
+
+body,
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
 .block {
   width: var(--block-width);
   height: var(--block-width);
@@ -14,4 +23,14 @@ main {
   width: var(--width);
   display: inline-flex;
   flex-wrap: wrap;
+}
+@media only screen and (max-width: 675px) {
+  :root {
+    --width: min(95vh, 95vw);
+  }
+}
+@media only screen and (min-width: 675px) {
+  .inputs {
+    flex-direction: row;
+  }
 }
